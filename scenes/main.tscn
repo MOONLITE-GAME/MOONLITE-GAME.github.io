@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://cvvxedqhgp820" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://bvw6fl7gby18j" path="res://img/background.png" id="2_tbgi4"]
+[ext_resource type="FontFile" uid="uid://fh5qsjp8cti7" path="res://font/vcr.ttf" id="3_tefeu"]
+[ext_resource type="FontFile" uid="uid://dnh50yfjnvpuv" path="res://font/5by7.ttf" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://blgu71apt1w4v" path="res://img/twitter.svg" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://dd3h358rksdvu" path="res://img/github.svg" id="6_tefeu"]
+
+[node name="Control" type="Control" unique_id=2111495505]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jyhfs")
+
+[node name="bg" type="ColorRect" parent="." unique_id=1941247635]
+layout_mode = 0
+offset_left = -14588.0
+offset_top = -9803.0
+offset_right = 39555.0
+offset_bottom = 15347.0
+color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=200875423]
+position = Vector2(0, 24)
+texture = ExtResource("2_tbgi4")
+
+[node name="TITLE" type="VBoxContainer" parent="." unique_id=1622920613]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -629.0
+offset_top = -409.0
+offset_right = 629.0
+offset_bottom = -295.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MOONLITE" type="Label" parent="TITLE" unique_id=306867538]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 75
+text = "MOONLITE"
+horizontal_alignment = 1
+
+[node name="RES" type="Label" parent="TITLE" unique_id=1148067065]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 50
+text = "A Game Brought To You by RED ECLIPSE STUDIO"
+horizontal_alignment = 1
+
+[node name="center" type="VBoxContainer" parent="." unique_id=1972430596]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -246.0
+offset_right = 267.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="play" type="Button" parent="center" unique_id=1062660097]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 50
+text = "Play the Game"
+
+[node name="blog" type="Button" parent="center" unique_id=304228520]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 50
+text = "Check Out the Blog"
+
+[node name="blackBar" type="ColorRect" parent="." unique_id=1280369139]
+layout_mode = 0
+offset_left = -13518.999
+offset_top = -540.0
+offset_right = -11598.999
+offset_bottom = -465.0
+scale = Vector2(27.479998, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="newText" type="Label" parent="." unique_id=985586241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.5
+offset_top = -516.5
+offset_right = 382.5
+offset_bottom = -481.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_o6xl0")
+theme_override_font_sizes/font_size = 50
+text = "NEW BLOG OUT NOW: 2026-05-26"
+
+[node name="RES" type="Label" parent="." unique_id=1377010847]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 488.0
+offset_right = 925.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 30
+text = "RED ECLIPSE STUDIO 2026"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1469183374]
+layout_mode = 0
+offset_left = -958.0
+offset_top = 375.0
+offset_right = 326.0
+offset_bottom = 1015.0
+scale = Vector2(0.25, 0.25)
+
+[node name="twitter" type="TextureButton" parent="HBoxContainer" unique_id=1215146261]
+layout_mode = 2
+texture_normal = ExtResource("5_tbgi4")
+
+[node name="github" type="TextureButton" parent="HBoxContainer" unique_id=995087468]
+layout_mode = 2
+texture_normal = ExtResource("6_tefeu")
+
+[connection signal="pressed" from="center/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="center/blog" to="." method="_on_blog_pressed"]
+[connection signal="pressed" from="HBoxContainer/twitter" to="." method="_on_twitter_pressed"]
+[connection signal="pressed" from="HBoxContainer/github" to="." method="_on_github_pressed"]

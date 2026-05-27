@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bhr15dgtg7po5"]
+
+[ext_resource type="Texture2D" uid="uid://bvw6fl7gby18j" path="res://img/background.png" id="1_m2wjd"]
+[ext_resource type="FontFile" uid="uid://fh5qsjp8cti7" path="res://font/vcr.ttf" id="2_62x6j"]
+[ext_resource type="Script" uid="uid://bdn2cvu64rlld" path="res://scripts/exit.gd" id="3_gq7gn"]
+
+[node name="20260526" type="Control" unique_id=73989606]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="." unique_id=516477376]
+layout_mode = 0
+offset_left = -14588.0
+offset_top = -9803.0
+offset_right = 39555.0
+offset_bottom = 15347.0
+color = Color(0.28627452, 0.011764706, 0.5372549, 1)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=771028718]
+position = Vector2(0, 24)
+texture = ExtResource("1_m2wjd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=766410372]
+layout_mode = 0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="title" type="Label" parent="." unique_id=1693513266]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -505.0
+offset_right = 286.0
+offset_bottom = -439.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_62x6j")
+theme_override_font_sizes/font_size = 75
+text = "2026-05-26 by E-DubzNG"
+horizontal_alignment = 1
+
+[node name="text" type="RichTextLabel" parent="." unique_id=54746311]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -952.0
+offset_top = -409.0
+offset_right = 952.0
+offset_bottom = 449.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_62x6j")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Hey everyone! It's E-Dubz here testing out something new:
+THE MOONLITE BLOG!
+
+This is a website I built from scratch using Godot! I plan on
+using this to communicate with you guys on what is happening with the game! Speaking of news on the game, let's take a look at what we've been cookin' up lately! 
+
+This month I've been focused on implementing some new things that give the game a new look (as seen in the previous update which improved the Character Select and Loadout Menus). Even now that that update is out, I'm still coming up with some new designs to make the game look better. I won't share any of those designs here though. That would be spoilers! Alongside that, I've also started working on content for CHAPTER 1. So far development on that has been going very well. QA is liking what I've been doing so far, so I that's probably a good sign. 
+
+I know I said no spoilers, but what if I showed one small thing from CHAPTER 1? Wouldn't it be funny? Wouldn't that be great???
+
+[img]res://img/blog/2026-05-26/sneakpeakLOL.png[/img]
+There. That's your teaser. A random screenshot. Wow. Crazy. (Fun Fact: We actually just implemented screenshotting in game lmao. Next update brings random stuff like that)
+
+Anyways, that's about all I have to say for now. Thanks for reading. We plan on updating this every week, but will we follow through with that? Who knows! There's only one way to find out! Be back again or else...
+
+Ok that's it. Bye! Stay hydrated! Stay cool during this hot weather!
+
+"
+horizontal_alignment = 1
+
+[node name="exit" type="Button" parent="." unique_id=253843612]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = 438.0
+offset_right = 62.5
+offset_bottom = 490.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_62x6j")
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+script = ExtResource("3_gq7gn")
+
+[connection signal="pressed" from="exit" to="exit" method="_on_pressed"]
