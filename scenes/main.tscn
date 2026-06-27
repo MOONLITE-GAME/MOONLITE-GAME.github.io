@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dnh50yfjnvpuv" path="res://font/5by7.ttf" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://blgu71apt1w4v" path="res://img/twitter.svg" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://dd3h358rksdvu" path="res://img/github.svg" id="6_tefeu"]
+[ext_resource type="SpriteFrames" uid="uid://d2nt6j5x8xofa" path="res://img/thing.xml" id="7_o6xl0"]
 
 [node name="Control" type="Control" unique_id=2111495505]
 layout_mode = 3
@@ -85,7 +86,14 @@ theme_override_fonts/font = ExtResource("3_tefeu")
 theme_override_font_sizes/font_size = 50
 text = "Check Out the Blog"
 
+[node name="credits" type="Button" parent="center" unique_id=259139085]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 50
+text = "MOONLITE Credits"
+
 [node name="blackBar" type="ColorRect" parent="." unique_id=1280369139]
+visible = false
 layout_mode = 0
 offset_left = -13518.999
 offset_top = -540.0
@@ -95,6 +103,7 @@ scale = Vector2(27.479998, 1)
 color = Color(0, 0, 0, 1)
 
 [node name="newText" type="Label" parent="." unique_id=985586241]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -138,7 +147,26 @@ texture_normal = ExtResource("5_tbgi4")
 layout_mode = 2
 texture_normal = ExtResource("6_tefeu")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1441519977]
+visible = false
+position = Vector2(-558, 460)
+scale = Vector2(0.47718632, 0.47718632)
+sprite_frames = ExtResource("7_o6xl0")
+animation = &"thing"
+autoplay = "thing"
+frame = 7
+frame_progress = 1.0
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=709966325]
+layout_mode = 0
+offset_left = -632.0
+offset_top = 392.0
+offset_right = -483.0
+offset_bottom = 529.0
+
 [connection signal="pressed" from="center/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="center/blog" to="." method="_on_blog_pressed"]
+[connection signal="pressed" from="center/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="HBoxContainer/twitter" to="." method="_on_twitter_pressed"]
 [connection signal="pressed" from="HBoxContainer/github" to="." method="_on_github_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

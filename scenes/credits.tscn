@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://b7fe2cvkhr8ck"]
+
+[ext_resource type="Script" uid="uid://ca5n14pwkyqfw" path="res://scripts/credits.gd" id="1_hi6pi"]
+[ext_resource type="FontFile" uid="uid://fh5qsjp8cti7" path="res://font/vcr.ttf" id="2_7jw14"]
+[ext_resource type="AudioStream" uid="uid://carmkdf571g1c" path="res://mus/bopeeboMoonlite.ogg" id="3_0ctdu"]
+
+[node name="Credits" type="Control" unique_id=992630827]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hi6pi")
+
+[node name="black" type="ColorRect" parent="." unique_id=1934412776]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="credits" type="Label" parent="." unique_id=1257803701]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -952.0
+offset_top = 570.5
+offset_right = 1012.0
+offset_bottom = 5427.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7jw14")
+theme_override_font_sizes/font_size = 45
+text = "CREDITS
+
+
+
+
+
+A RED ECLIPSE STUDIO PRODUCTION
+
+
+
+
+
+DIRECTOR
+
+E-DUBZNG
+
+
+
+CO-DIRECTOR
+
+PAPYRUS78677
+
+
+
+PRODUCER
+
+PAPYRUS78677
+
+
+
+
+PROGRAMMING TEAM
+
+E-DUBZNG
+
+PAPYRUS78677
+
+DB
+
+
+SOUND TEAM
+
+E-DUBZNG
+
+
+
+VOICE ACTORS
+
+DOGDILLON - DUMMY
+
+
+
+QA TEAM
+
+PAPYRUS78677
+
+DB
+
+
+
+SPECIAL THANKS
+
+CHERRYTHECOOL - GODOT SPARROW PLUGIN
+
+DIALOGIC TEAM - DIALOGIC PLUGIN
+
+jefvel - NEWGROUNDS PLUGIN
+
+
+
+
+E-DUBZNG WOULD LIKE TO THANK
+
+
+THEIR MOM - GIVING BIRTH TO THEM
+
+
+NERO - EMOTIONAL SUPPORT
+
+
+THEIR TWITTER MUTUALS - BEING COOL
+
+
+DOGDILLON - MAKING D-MONEY CLICKER
+
+
+YOU READING THIS - PLAYING THE GAME
+
+
+TOM FULP - MAKING NEWGROUNDS
+
+
+THE FUNKIN CREW - MAKING FNF
+
+
+NINJAMUFFIN99 - OPEN SOURCING FNF
+
+
+IF FNF WASNT OPEN SOURCE THEY PROBABLY 
+
+WOULDNT HAVE EVER GOTTEN INTO CODING
+
+
+
+PAPYRUS78677 WOULD LIKE TO THANK
+
+LINUS TORVALDS - MAKING LINUX
+
+THE LINUX COMMUNITY
+
+
+THANK YOU FOR PLAYING"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1266199071]
+stream = ExtResource("3_0ctdu")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

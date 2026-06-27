@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="thing.png">
+	<!-- Created with Adobe Animate version 24.0.13.5 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="thing0000" x="0" y="0" width="263" height="263"/>
+	<SubTexture name="thing0001" x="0" y="0" width="263" height="263"/>
+	<SubTexture name="thing0002" x="263" y="0" width="263" height="263"/>
+	<SubTexture name="thing0003" x="263" y="0" width="263" height="263"/>
+	<SubTexture name="thing0004" x="0" y="263" width="263" height="263"/>
+	<SubTexture name="thing0005" x="0" y="263" width="263" height="263"/>
+	<SubTexture name="thing0006" x="263" y="263" width="263" height="263"/>
+	<SubTexture name="thing0007" x="263" y="263" width="263" height="263"/>
+</TextureAtlas>
